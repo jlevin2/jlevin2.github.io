@@ -1,0 +1,30 @@
+body {
+    padding-top: 70px;
+    /*padding-bottom: 70px;*/
+}
+
+/*path:hover {*/
+/*    fill-opacity: .7;*/
+/*}*/
+
+.card {
+    width: auto;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.work {
+    background-color: grey;
+    color: white;
+}
+
+
+.education {
+    background-color: #000b61;
+    color: white;
+}
+
+.other {
+    background-color: yellow;
+    color: white;
+}

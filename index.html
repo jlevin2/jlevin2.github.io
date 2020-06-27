@@ -1,1 +1,242 @@
-Hello world!
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://d3js.org/d3.v5.js"></script>
+    <script src="https://d3js.org/d3-geo.v1.min.js"></script>
+    <script src="//d3js.org/topojson.v1.min.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.js"
+            integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
+            crossorigin="anonymous"></script>
+    <title>Joshua Levin</title>
+</head>
+<body>
+<div id="page-container">
+    <div class="container-fluid" id="header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="#">Josh Levin</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav mr-auto">
+                    <a class="nav-item nav-link" href="#work">Work</a>
+                    <!--                        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>-->
+                    <a class="nav-item nav-link" href="#education">Education</a>
+                    <a class="nav-item nav-link" href="#other">Projects and Outside Work</a>
+                </div>
+                <span class="navbar-text">
+                    joshslevin1@gmail.com
+                </span>
+            </div>
+        </nav>
+    </div>
+    <div class="container-fluid" id="map">
+        <script type="text/javascript" src="js/map.js"></script>
+    </div>
+    <div class="row">
+        <div class="col-8" id="work" style="padding-left: 2%">
+            <h5>Experience</h5>
+            <hr>
+            <div class="card work" id="palantir">
+                <!--            <img class="card-img-top" src="images/palantir_cropped.png"-->
+                <!--                 style="height: 100px;object-fit: contain;horiz-align: left" alt="Palantir">-->
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-1" style="padding-right: 0px;padding-left: 0px">
+                            <a href="http://palantir.com">
+                                <img src="images/palantir.png" class="img-fluid mx-auto d-block" style="max-height:50px;object-fit: contain;"></a>
+                        </div>
+                        <h5 class="col-6" style="text-align: left;padding-left: 2%">
+                            Palantir<br> <i>Forward Deployed Engineer</i></h5>
+                        <div class="col" style="text-align: right">2020-Present, Washington, D.C</div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    Worked on government projects
+                </div>
+            </div>
+            <div class="card work" id="xandr" style="margin-top: 10px">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-1" style="padding-right: 0px;padding-left: 0px">
+                            <a href="http://xandr.com">
+                                <img src="images/xandr-logo.png" class="img-fluid mx-auto d-block" style="max-height:50px;object-fit: contain;"></a>
+                        </div>
+                        <h5 class="col-6" style="text-align: left;padding-left: 2%">
+                            Xandr<br> <i>Software Engineering Intern</i></h5>
+                        <div class="col" style="text-align: right">Summer 2019, New York City</div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    Data Platform as a Service team. Worked in C, Scala, and Java. Used technologies Hadoop, Kafka, and Docker.
+                </div>
+            </div>
+            <div class="card work" id="brownwork" style="margin-top: 10px">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-1" style="padding-right: 0px;padding-left: 0px">
+                            <a href="http://cs.brown.edu">
+                                <img src="images/brown_logo.png" class="img-fluid mx-auto d-block" style="max-height:50px;object-fit: contain;"></a>
+                        </div>
+                        <h5 class="col-6" style="text-align: left;padding-left: 2%">
+                            Brown CS Department <br> <i>Teaching Assistant</i></h5>
+                        <div class="col" style="text-align: right">Providence, RI</div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-2">
+                            Spring 2020
+                        </div>
+                        <div class="col">
+                            <a href="https://cs.brown.edu/courses/csci1951-a/">
+                                CS 1951a Data Science <strong>Head</strong> Teaching Assistant
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            Fall 2019
+                        </div>
+                        <div class="col">
+                            <a href="https://cs.brown.edu/courses/csci1470/">
+                            CS 1470 Deep Learning
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            Spring 2019
+                        </div>
+                        <div class="col">
+                            <a href="https://cs.brown.edu/courses/csci1800/">
+                            CS 1800 <strong>Head</strong> Teaching Assistant
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            Fall 2018
+                        </div>
+                        <div class="col">
+                            <a href="https://cs.brown.edu/courses/csci1270/">
+                            CS 1270 Database Management Systems
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            Spring 2018
+                        </div>
+                        <div class="col">
+                            <a href="https://cs.brown.edu/courses/csci1800/">
+                            CS 1800 Cybersecurity and International Relations
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card work" id="activision" style="margin-top: 10px; margin-bottom: 10px">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-1" style="padding-right: 0px;padding-left: 0px">
+                            <a href="http://activision.com">
+                                <img src="images/activision.png" class="img-fluid mx-auto d-block" style="max-height:50px;object-fit: contain;"></a>
+                        </div>
+                        <h5 class="col-6" style="text-align: left">
+                            Activision <br> <i>Consumer Analytics Intern</i></h5>
+                        <div class="col" style="text-align: right">Summer 2018, Los Angeles</div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    Engineered and communicated data driven answers for business problems.
+                    Developed ETLs and data pipelines through AWS ecosystem using Airflow/Docker/Presto/Hive/Python
+                </div>
+            </div>
+            <div class="card work" id="wb" style="margin-top: 10px; margin-bottom: 10px">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-1" style="padding-right: 0px;padding-left: 0px">
+                            <a href="http://wbgames.com">
+                                <img src="images/wb_logo.jpg" class="img-fluid mx-auto d-block" style="max-height:50px;object-fit: contain;"></a>
+                        </div>
+                        <h5 class="col-6" style="text-align: left">WB Games Boston <br> <i>Data Analytics Engineering Intern</i></h5>
+                        <div class="col" style="text-align: right">Summer 2017, Boston</div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    Developed ETLs, data ingestion, data health monitoring, and executive reporting for business data primarily using Tableau, Python, and Amazon Redshift.
+                </div>
+            </div>
+        </div>
+        <div class="col-4" id="education" style="padding-right: 2%">
+            <h5>Education</h5>
+            <hr>
+            <div class="card education" id="brown">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-1" style="padding-right: 0px;padding-left: 0px">
+                            <a href="http://cs.brown.edu">
+                                <img src="images/brown_logo.png" class="img-fluid mx-auto d-block" style="max-height:50px;object-fit: contain;"></a>
+                        </div>
+                        <h5 class="col-11" style="text-align: left;padding-left: 2%">
+                            Brown University <br> <i>ScB in Computer Science</i></h5>
+<!--                        <div class="col" style="text-align: right">2016-2020, Providence, RI-->
+<!--                        </div>-->
+                    </div>
+                </div>
+                <div class="card-body">
+                    Magna Cum Laude (Top 20%) <br>
+                    Senior Prize in Computer Science <br>
+                    Honors in Concentration, Thesis: <a href="https://cs.brown.edu/research/pubs/theses/ugrad/2020/levin.joshua.pdf">
+                    ViperProbe: Using eBPF Metrics to Improve Microservice Observability</a>
+                </div>
+            </div>
+            <div class="card education" id="bbn" style="margin-top: 10px; margin-bottom: 10px">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-1" style="padding-right: 0px;padding-left: 0px">
+                            <a href="http://bbns.edu">
+                                <img src="images/bbn_logo.png" class="img-fluid mx-auto d-block" style="max-height:50px;object-fit: contain;"></a>
+                        </div>
+                        <h5 class="col-11" style="text-align: left;padding-left: 2%">
+                            Buckingham Browne and Nichols</h5>
+<!--                        <div class="col" style="text-align: right">2010-2016, Cambridge, MA</div>-->
+                    </div>
+                </div>
+                <div class="card-body">
+                    Physical Sciences Prize <br>
+                    Cum Laude (Awarded to top 20% of high school class; selected by faculty) <br>
+                    Honor Roll 9-12th grades <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<footer>
+    <div class="container-fluid" id="footer" style="padding-left: 0px; padding-right: 0px">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">&copy; 2020 Joshua Levin</a>
+        </nav>
+    </div>
+
+</footer>
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>
