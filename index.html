@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://d3js.org/d3.v5.js"></script>
     <script src="https://d3js.org/d3-geo.v1.min.js"></script>
     <script src="//d3js.org/topojson.v1.min.js"></script>
@@ -27,7 +28,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav mr-auto">
-                    <a class="nav-item nav-link" href="#work">Work</a>
+                    <a class="nav-item nav-link" href="#experience">Experience</a>
                     <!--                        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>-->
                     <a class="nav-item nav-link" href="#education">Education</a>
                     <a class="nav-item nav-link" href="#other">Projects and Outside Work</a>
@@ -38,11 +39,31 @@
             </div>
         </nav>
     </div>
+    <div class="row">
+        <div class="col-3">
+            <img src="images/headshot.jpeg" class="img-fluid mx-auto d-block rounded-circle">
+        </div>
+        <div class="col-6">
+            <h4>About Me</h4>
+            <hr>
+            <ul>
+                <li>Currently Forward Deployed Engineer at <a href="palantir.com">Palantir</a> out of Washington D.C</li>
+                <li>Brown CS '20</li>
+                <li>Grew up in Wellesley, MA (suburb of Boston)</li>
+                <li>Huge sports fan!</li>
+                <li>Movies & Video Games</li>
+            </ul>
+        </div>
+<!--        <div class="col-3" style="text-align: right;">-->
+<!--            -->
+<!--        </div>-->
+    </div>
+<!--    <h4>My Journey</h4>-->
     <div class="container-fluid" id="map">
         <script type="text/javascript" src="js/map.js"></script>
     </div>
     <div class="row">
-        <div class="col-8" id="work" style="padding-left: 2%">
+        <div class="col-8" id="experience" style="padding-left: 2%">
             <h5>Experience</h5>
             <hr>
             <div class="card work" id="palantir">
@@ -226,7 +247,14 @@
 <footer>
     <div class="container-fluid" id="footer" style="padding-left: 0px; padding-right: 0px">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">&copy; 2020 Joshua Levin</a>
+            <div class="col-4">
+                <a class="navbar-brand" href="#">&copy; 2020 Joshua Levin</a>
+            </div>
+            <div class="col" style="text-align: right">
+                <a href="https://www.linkedin.com/in/joshua-levin-brown/" class="fa fa-linkedin-square"></a>
+                <a href="mailto:joshslevin1@gmail.com" class="fa fa-envelope-o"></a>
+            </div>
+
         </nav>
     </div>
 
