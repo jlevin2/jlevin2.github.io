@@ -7,6 +7,20 @@ body {
 /*    fill-opacity: .7;*/
 /*}*/
 
+
+div.tooltip {
+    position: absolute;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 2px;
+    font: 16px sans-serif;
+    background: white;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
 .card {
     width: auto;
     margin-left: 2%;

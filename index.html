@@ -17,6 +17,7 @@
             integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
             crossorigin="anonymous"></script>
     <title>Joshua Levin</title>
+    <script type="text/javascript" src="js/map.js"></script>
 </head>
 <body>
 <div id="page-container">
@@ -40,10 +41,10 @@
         </nav>
     </div>
     <div class="row">
-        <div class="col-3">
-            <img src="images/headshot.jpeg" class="img-fluid mx-auto d-block rounded-circle">
+        <div class="col-2">
+            <img src="images/headshot.jpeg" class="img-fluid mx-auto d-block rounded">
         </div>
-        <div class="col-6">
+        <div class="col-4">
             <h4>About Me</h4>
             <hr>
             <ul>
@@ -54,14 +55,16 @@
                 <li>Movies & Video Games</li>
             </ul>
         </div>
+        <div class="col-6" id="mapcol">
+            <div class="container-fluid" id="map">
+            </div>
+        </div>
 <!--        <div class="col-3" style="text-align: right;">-->
 <!--            -->
 <!--        </div>-->
     </div>
 <!--    <h4>My Journey</h4>-->
-    <div class="container-fluid" id="map">
-        <script type="text/javascript" src="js/map.js"></script>
-    </div>
+
     <div class="row">
         <div class="col-8" id="experience" style="padding-left: 2%">
             <h5>Experience</h5>

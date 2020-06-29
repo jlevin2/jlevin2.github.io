@@ -1,13 +1,16 @@
-$(document).ready(function(){
-    var w = $(document).width();
+$('#mapcol').ready(function(){
+    var width = $('#mapcol').width();
+    var height = $('#mapcol').height();
 
-    var width  = w;
-    var height = 0.65*(w/2);
-
-
+    // var width  = w/2.5;
+    // var height = 0.55*(w/2);
+    var geoscale = Math.min(1000*(width/850), 1000*(height/475))
     var projection = d3.geoAlbersUsa()
         .translate([width/2, height/2])
-        .scale([1000*(w/1500)]);
+        .scale([geoscale]);
+
+    var smalldot = Math.round(geoscale / 150);
+    var star = Math.round(geoscale / 75);
 
 // Define path generator
     var path = d3.geoPath()
@@ -20,6 +23,11 @@ $(document).ready(function(){
         .append("svg")
         .attr("width", width)
         .attr("height", height);
+
+    var div = d3.select("body")
+        .append("div")
+        .attr("class", "tooltip")
+        .style("opacity", 0);
 
 
     d3.json("us-states.json").then(function(json) {
@@ -35,10 +43,17 @@ $(document).ready(function(){
 
 
     d3.csv("locations.csv").then(function (data) {
-        console.log(data)
+        // console.log(data)
         svg.selectAll("circle")
             .data(data)
             .enter()
+            .append("a")
+            .attr("href", function (d) {
+                return "#" +d.link;
+            })
+            .attr("id", function (d) {
+                return d.link + "dot";
+            })
             .append("circle")
             .attr("cx", function(d) {
                 return projection([d.lon, d.lat])[0];
@@ -47,11 +62,25 @@ $(document).ready(function(){
                 return projection([d.lon, d.lat])[1];
             })
             .attr("r", function(d) {
-                return 2;
+                return smalldot;
             })
             .style("fill", "rgb(217,91,67)")
             .style("opacity", 1.0)
-
+            // .on("mouseover", function(d) {
+            //     div.transition()
+            //         .duration(200)
+            //         .style("opacity", .9);
+            //     div.text(d.name)
+            //         .style("left", (d3.event.pageX) + "px")
+            //         .style("top", (d3.event.pageY - 28) + "px");
+            // })
+            // // fade out tooltip on mouse out
+            // .on("mouseout", function(d) {
+            //     div.transition()
+            //         .duration(500)
+            //         .style("opacity", 0);
+            // })
+        ;
     });
 
 });

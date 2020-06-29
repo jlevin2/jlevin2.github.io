@@ -1,5 +1,5 @@
-date,place,lat,lon
-Summer 2018,Needham,42.280930,-71.237755
-Summer 2018,Los Angeles,34.0522,-118.243683
-Summer 2019,New York City,40.71455,-74.007124
-Present,Washington DC,38.8903694,-77.0319595
+date,place,name,icon,link,lat,lon
+Summer 2018,Boston,WB Games Boston,wb_logo.jpg,activision,42.280930,-71.237755
+Summer 2018,Los Angeles,Activision Blizzard,activision_logo.png,brownwork,34.0522,-118.243683
+Summer 2019,New York City,Xandr,xandr-logo.png,palantir,40.71455,-74.007124
+Present,Washington DC,Palantir,palantir.png,experience,38.8903694,-77.0319595
